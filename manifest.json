@@ -1,6 +1,6 @@
 { 
-  "name": "Greek/Latin Word Finder",
-  "description": "This extension uses the Perseus Project Greek Word Study Tool to return the definitions of Greek and Latin words.",
+  "name": "Greek/Latin Word Lookup",
+  "description": "Look up definitions of Greek/Latin words conveniently in your browser. Not affiliated with Perseus Project.",
   "version": "0.1",
   "manifest_version": 2,
   "permissions": [
