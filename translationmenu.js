@@ -19,12 +19,9 @@ function translate() {
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
   if (tab) {
-      //initialize variable for language as latin
-      let lang = 'latin';
-
-      // if conditional to check for language of searched string
-      if (info.selectionText.charCodeat(0) >= 880 && info.selectionText.charCodeAt(0) <= 1023) {
-        lang = 'greek';
+      // if conditional to check if string has Latin or Greek characters
+      if (info.selectionText.charCodeAt(0) >= 97 && info.selectionText.charCodeAt(0) <= 687) {
+        info.selectionText += '&la=la' //search URL defaults to Greek search unless Latin is passed in
       }
 
       //code to be injected
@@ -53,8 +50,13 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
   }
 });
 
+//functionality issues
+//need to distinguish between Latin/Greek
+//need to be able to select a new word and search
+
 //stretch goals
 //access only one part of the website for iFrame
 //popup near cursor
 //some styling
 //style extension popup
+//manifest 3
