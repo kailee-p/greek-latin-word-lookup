@@ -24,35 +24,47 @@ chrome.contextMenus.onClicked.addListener(function(info, tab) {
         info.selectionText += '&la=la' //search URL defaults to Greek search unless Latin is passed in
       }
 
+      // alert(browser.windows.get(tab.windowId));
+
+      // let x = window.screenTop;
+      // let y = window.screenLeft;
+
+      // document.addEventListener('mousemove', (event) => {
+      //   x = event.clientX
+      //   y = event.clientY
+      // })
+      
+      let params = `scrollbars=no,resizable=no,status=no,location=no,toolbar=no,menubar=no,
+width=400,height=200,left=0,top=0`;
+      window.open(`https://www.perseus.tufts.edu/hopper/morph?l=${info.selectionText}#lexicon`, 'translation', params)
+
       //code to be injected
-      var code = [
-          'var d = document.createElement("div");',
-          'd.setAttribute("style", "'
-              + 'background-color: white; '
-              + 'color: black; '
-              + 'width: 100px; '
-              + 'height: 100px; '
-              + 'position: fixed; '
-              + 'top: 70px; '
-              + 'left: 30px; '
-              + 'z-index: 9999; '
-              + '");',
-              'let iframe = document.createElement("iframe")',
-              `iframe.setAttribute("src", "https://www.perseus.tufts.edu/hopper/morph?l=${info.selectionText}#lexicon")`,
-              'd.appendChild(iframe)',
-              'document.body.appendChild(d);',
-          `console.log('${info.selectionText}')`
-      ].join("\n");
+      // let code = [
+      //     // 'document.querySelector("body").style.backgroundColor = "black"',
+      //     'var d = document.createElement("div");',
+      //     'd.setAttribute("id", "translationExt")',
+      //     'd.setAttribute("style", "'
+      //         + 'background-color: white; '
+      //         + 'color: black; '
+      //         + 'width: 100px; '
+      //         + 'height: 100px; '
+      //         + 'position: fixed; '
+      //         + 'top: 70px; '
+      //         + 'left: 30px; '
+      //         + 'z-index: 9999; '
+      //         + '");',
+      //         'let iframe = document.createElement("iframe")',
+      //         `iframe.setAttribute("src", "https://www.perseus.tufts.edu/hopper/morph?l=${info.selectionText}#lexicon")`,
+      //         'd.appendChild(iframe)',
+      //         'document.body.appendChild(d);',
+      //         'document.addEventListener("click", ()=>{document.querySelector("#translationExt").remove(); console.log("test")})',
+      // ].join("\n");
       // info.selectionText
       
       /* Inject the code into the current tab */
-      chrome.tabs.executeScript(tab.id, { code: code });
+      // chrome.tabs.executeScript(tab.id, { code: code });
   }
 });
-
-//functionality issues
-//need to distinguish between Latin/Greek
-//need to be able to select a new word and search
 
 //stretch goals
 //access only one part of the website for iFrame
