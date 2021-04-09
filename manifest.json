@@ -1,0 +1,15 @@
+{ 
+  "name": "Greek/Latin Word Finder",
+  "description": "This extension uses the Perseus Project Greek Word Study Tool to return the definitions of Greek and Latin words.",
+  "version": "0.1",
+  "manifest_version": 2,
+  "permissions": [
+    "contextMenus",
+    "activeTab"
+  ], 
+  "background": {
+    "scripts": ["translationmenu.js"],
+    "persistent": false
+  }
+}
+
