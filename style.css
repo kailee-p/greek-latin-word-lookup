@@ -1,0 +1,10 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#popup-div {
+  padding: 10px;
+  width: 200px;
+  background-color: beige;
+}
