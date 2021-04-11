@@ -3,7 +3,7 @@ let topCoord;
 const body = document.querySelector('body')
 
 document.addEventListener("contextmenu", (e)=>{
-  leftCoord = Math.floor(e.pageX) - 50;
+  leftCoord = Math.floor(e.pageX) - 50 >= 10 ? Math.floor(e.pageX) - 50 : 10;
   topCoord = Math.floor(e.pageY) + 15;
 })
 
@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
   if(message.txt === 'run'){
 
     let lang = 'greek';
-
+x
     // if conditional to check for language of searched string
     if (message.word.charCodeAt(0) >= 65 && message.word.charCodeAt(0) <= 339) {
       lang = 'latin';
@@ -24,7 +24,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
       const data = await response.text()
       return data;
     }
-    
+
     //styling for modal
     const defDiv = document.createElement('div');
       defDiv.setAttribute("style", "background-color: white;"
