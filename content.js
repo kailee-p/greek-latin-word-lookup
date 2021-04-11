@@ -2,6 +2,7 @@ let leftCoord;
 let topCoord;
 const body = document.querySelector('body')
 
+//detects where you clicked on the page and displays the popup modal near your cursor
 document.addEventListener("contextmenu", (e)=>{
   leftCoord = Math.floor(e.pageX) - 50 >= 10 ? Math.floor(e.pageX) - 50 : 10;
   topCoord = Math.floor(e.pageY) + 15;
@@ -44,6 +45,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
       const resourceSite = document.createElement('div')
       resourceSite.innerHTML = data
       
+      //pull mainCol div from Perseus Project
       const mainCol = resourceSite.querySelector('#main_col');
       const pTag = mainCol.querySelector('p');
 
@@ -74,6 +76,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
 
         body.appendChild(defDiv)
 
+        //toggle the grammatical tables in the modal
         const toggle = body.querySelector("#showGrammaticalTable")
         toggle.addEventListener("click", (e)=>{
           e.preventDefault()

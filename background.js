@@ -1,3 +1,4 @@
+//context menu that displays upon right clicking a selected word
 const translationContextMenu = {
   "id": "Translation Context Menu",
   "title": "Translate Greek/Latin Word",
