@@ -15,8 +15,8 @@ A Chrome extension that allows you to look up Greek and Latin words directly in 
 1. Highlight the word you wish to look up.
 2. Right click.
 3. Select "Translate Greek/Latin Word" from dropdown menu.
-3a. Select "Show more" to see grammatical tables for the selected word.
-3b. Select "Go to full lexicon entry" to navitage to Perseus Project. 
+3a. Select "Show more" to see grammatical tables for the selected word.  
+3b. Select "Go to full lexicon entry" to navitage to Perseus Project.  
     
 # Screenshots
 
