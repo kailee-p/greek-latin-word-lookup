@@ -58,12 +58,19 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
         const table = mainCol.querySelector('table');
 
         pTag.innerHTML = `<a id="showGrammaticalTable" href="">Show more</a> <hr> <a href=${url} target="_blank">Go to full lexicon entry (Perseus Project)</a>`
-       
+        
         table.style.display = 'none'
 
         defDiv.appendChild(lemmaHeader);
         defDiv.appendChild(pTag);
         defDiv.appendChild(table);
+
+        //check if there were multiple definitions possible
+        if (mainCol.querySelectorAll('.lemma_header').length > 1) {
+          const multiDefPara = document.createElement('p');
+          multiDefPara.innerHTML = '<em>There were multiple definitions returned for this word. Check Perseus Project for all possible definitions.</em>';
+          defDiv.appendChild(multiDefPara);
+        }
 
         body.appendChild(defDiv)
 
