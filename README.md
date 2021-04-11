@@ -34,4 +34,4 @@ Winner of Codesmith PTRI 3's Hackathon.
 
 Credit to [Perseus Project Word Study Tool](http://www.perseus.tufts.edu/hopper/morph) for definitions.
 
-Icon made by [Freepik](https://www.freepik.com" title="Freepik) from [Flaticon](https://www.flaticon.com/).
+Icon made by [Freepik](https://www.freepik.com") from [Flaticon](https://www.flaticon.com/).
