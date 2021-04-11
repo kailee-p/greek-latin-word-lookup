@@ -20,7 +20,7 @@ A Chrome extension that allows you to look up Greek and Latin words directly in 
 
 ![A screenshot of the extension's context menu that triggers the definition modal.](https://i.imgur.com/G7QGOcQ.png)
 
-# Screenshots
+# Additional Screenshots
 
 ![A screenshot of the extension's explanatory popup and the definition modal when used on a Greek word.](https://i.imgur.com/FQPW2fP.png)
 
