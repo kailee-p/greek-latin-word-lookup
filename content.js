@@ -11,7 +11,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
   if(message.txt === 'run'){
 
     let lang = 'greek';
-x
+
     // if conditional to check for language of searched string
     if (message.word.charCodeAt(0) >= 65 && message.word.charCodeAt(0) <= 339) {
       lang = 'latin';
