@@ -34,7 +34,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
         + `top: ${topCoord}px;`
         + `left: ${leftCoord}px;`
         + 'border: 2px solid lightgrey;'
-        + 'padding-left: 10px;'
+        + 'padding: 0px 10px;'
         + `font-family:'Helvetica', Arial, sans-serif;`
         + 'z-index: 9999; ');
 
