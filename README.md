@@ -3,6 +3,8 @@ A Chrome extension that allows you to look up Greek and Latin words directly in 
 
 # How to Install
 
+**NOTE**: This extension is currently awaiting approval on the Chrome Web Store. Below are the instructions to install it without downloading it from the Web Store, if you choose to do so. 
+
 1. Click on the green **Code** button on the main repository page.
 2. Choose **Download ZIP**. 
 
