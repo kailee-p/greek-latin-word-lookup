@@ -5,10 +5,24 @@ A Chrome extension that allows you to look up Greek and Latin words directly in 
 
 1. Click on the green **Code** button on the main repository page.
 2. Choose **Download ZIP**. 
+
+![A screenshot of the main page of the extension showing how to download the ZIP file.](https://i.imgur.com/l2jTgj3.png)
+
 3. Unzip **greek-latin-word-lookup-main.zip** in your chosen location on your computer. You should now have a folder titled **greek-latin-word-lookup-main**.
+
+![A screenshot of the desktop showing a ZIP file and unzipped folder.](https://i.imgur.com/OHGyUrO.png)
+
 4. Navigate to the **Chrome Extension Manager** (type **chrome://extensions/** in the search bar). 
+
 5. Select **Load unpacked** in the upper left hand corner. 
+
+![A screenshot of the Chrome Extension Manager with Load unpacked highlighted.](https://i.imgur.com/ohqUNPD.png)
+
 6. Navigate to the folder titled **greek-latin-word-lookup-main** on your computer and select it. The extension should now be loaded. 
+
+![A screenshot showing how to select the correct folder.](https://i.imgur.com/JE564fS.png)
+
+![A screenshot of the installed extension.](https://i.imgur.com/53JHivl.png)
 
 # How to Use
 
