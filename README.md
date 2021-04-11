@@ -27,6 +27,10 @@ A Chrome extension that allows you to look up Greek and Latin words directly in 
 
 ![A screenshot of the extension's definition modal when used on a Latin word.](https://i.imgur.com/03yG5g0.png)
 
+![A screenshot of the extension's error message when used on a word that does not return a definition.](https://i.imgur.com/Z9nRkBg.png)
+
+![A screenshot of the extension's modal when used on a word that returns multiple definitions.](https://i.imgur.com/hVZkKvY.png)
+
 # Credits
 
 Created by [Kailee Pedersen](https://github.com/kailee-p) and [Randy Diebold](https://github.com/Randy-diebold).
