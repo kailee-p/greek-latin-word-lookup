@@ -18,13 +18,13 @@ A Chrome extension that allows you to look up Greek and Latin words directly in 
   3a. Select "Show more" to see grammatical tables for the selected word. 
   3b. Select "Go to full lexicon entry" to navitage to Perseus Project. 
   
-[A GIF showing the extension in action.](https://i.imgur.com/1XDY6Qy.gif)
+![A GIF showing the extension in action.](https://i.imgur.com/1XDY6Qy.gif)
   
 # Screenshots
 
-[A screenshot of the extension's explanatory popup and the definition modal when used on a Greek word.](https://i.imgur.com/FQPW2fP.png)
+![A screenshot of the extension's explanatory popup and the definition modal when used on a Greek word.](https://i.imgur.com/FQPW2fP.png)
 
-[A screenshot of the extension's definition modal when used on a Latin word.](https://i.imgur.com/03yG5g0.png)
+![A screenshot of the extension's definition modal when used on a Latin word.](https://i.imgur.com/03yG5g0.png)
 
 # Credits
 
