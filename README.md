@@ -5,18 +5,18 @@ A Chrome extension that allows you to look up Greek and Latin words directly in 
 
 1. Click on the green Code button on the main repository page.
 2. Choose "Download ZIP". 
-3. Unzip greek-latin-word-lookup-main.zip in your chosen location. You should now have a folder titled "greek-latin-word-lookup-main".
-4. Navigate to the [Chrome Extension Manager](chrome://extensions/). 
-5. Select "Load unpacked" in the upper left hand corner. 
-6. Navigate to the greek-latin-word-lookup-main folder and select it. The extension should now be loaded. 
+3. Unzip **greek-latin-word-lookup-main.zip** in your chosen location on your computer. You should now have a folder titled **greek-latin-word-lookup-main**.
+4. Navigate to the [**Chrome Extension Manager**](chrome://extensions/). 
+5. Select **Load unpacked** in the upper left hand corner. 
+6. Navigate to the folder titled **greek-latin-word-lookup-main** on your computer and select it. The extension should now be loaded. 
 
 # How to Use
 
 1. Highlight the word you wish to look up.
 2. Right click.
-3. Select "Translate Greek/Latin Word" from dropdown menu.  
-3a. Select "Show more" to see grammatical tables for the selected word.  
-3b. Select "Go to full lexicon entry" to navitage to Perseus Project.
+3. Select **Translate Greek/Latin Word** from dropdown menu.  
+3a. Select **Show more** to see grammatical tables for the selected word.  
+3b. Select **Go to full lexicon entry** to navigate to the word's entry in Perseus Project.
 
 # Screenshots
 
