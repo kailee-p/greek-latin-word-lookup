@@ -4,7 +4,11 @@ const body = document.querySelector('body')
 
 //detects where you clicked on the page and displays the popup modal near your cursor
 document.addEventListener("contextmenu", (e)=>{
+  //make sure modal does not go off the page on left or right side
   leftCoord = Math.floor(e.pageX) - 50 >= 10 ? Math.floor(e.pageX) - 50 : 10;
+  if (leftCoord + 250 > window.innerWidth) {
+    leftCoord = window.innerWidth - 260;
+  }
   topCoord = Math.floor(e.pageY) + 15;
 })
 
