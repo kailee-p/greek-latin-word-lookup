@@ -72,7 +72,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
         defDiv.appendChild(table);
 
         //check if there were multiple definitions possible
-        if (mainCol.querySelectorAll('.lemma_header').length > 1) {
+        if (mainCol.querySelectorAll('.analysis').length > 1) {
           const multiDefPara = document.createElement('p');
           multiDefPara.innerHTML = '<em>There were multiple definitions returned for this word. Check Perseus Project for all possible definitions.</em>';
           defDiv.appendChild(multiDefPara);
