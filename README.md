@@ -1,9 +1,11 @@
 # Greek/Latin Word Lookup
 A Chrome extension that allows you to look up Greek and Latin words directly in the browser using Perseus Project.
 
-# How to Install
+# How to Install 
 
-**NOTE**: This extension is currently awaiting approval on the Chrome Web Store. Below are the instructions to install it without downloading it from the Web Store, if you choose to do so. 
+This extension is [available on the Chrome Web Store](https://chrome.google.com/webstore/detail/greeklatin-word-lookup/bepkbeloebkffjopahcjfpapgdffopjc).
+
+If you'd like to download the latest version without waiting for an update, please see the instructions below:
 
 1. Click on the green **Code** button on the main repository page.
 2. Choose **Download ZIP**. 
