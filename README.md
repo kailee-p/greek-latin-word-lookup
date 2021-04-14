@@ -37,17 +37,13 @@ If you'd like to download the latest version without waiting for an update, plea
 3b. Select **Go to full lexicon entry** to navigate to the word's entry in Perseus Project.
 4. Clicking outside the definition will close it, allowing you to look up another word.
 
-![A screenshot of the extension's context menu that triggers the definition modal.](https://i.imgur.com/G7QGOcQ.png)
+![A screenshot of the extension's context menu that triggers the definition modal.](https://i.imgur.com/AMWdrvx.png)
 
 # Additional Screenshots
 
-![A screenshot of the extension's explanatory popup and the definition modal when used on a Greek word.](https://i.imgur.com/FQPW2fP.png)
+![A screenshot of the popup with credits and the modal.](https://i.imgur.com/ZfHPZZx.png)
 
-![A screenshot of the extension's definition modal when used on a Latin word.](https://i.imgur.com/03yG5g0.png)
-
-![A screenshot of the extension's error message when used on a word that does not return a definition.](https://i.imgur.com/Z9nRkBg.png)
-
-![A screenshot of the extension's modal when used on a word that returns multiple definitions.](https://i.imgur.com/hVZkKvY.png)
+![A screenshot of the modal with the grammar tables displayed.](https://i.imgur.com/GFc6RAM.png)
 
 # Credits
 
