@@ -51,6 +51,6 @@ Created by [Kailee Pedersen](https://github.com/kailee-p) and [Randy Diebold](ht
 
 Winner of Codesmith PTRI 3's Hackathon.
 
-Credit to [Perseus Project Word Study Tool](http://www.perseus.tufts.edu/hopper/morph) for definitions.
+Credit to [Perseus Digital Library](http://www.perseus.tufts.edu/hopper/morph) for definitions.
 
 Icon made by [Freepik](https://www.freepik.com") from [Flaticon](https://www.flaticon.com/).
