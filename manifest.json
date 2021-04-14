@@ -1,7 +1,7 @@
 {
   "manifest_version" : 2,
    "name": "Greek/Latin Word Lookup",
-   "description": "Look up definitions of Greek/Latin words conveniently in your browser. Not affiliated with Perseus Project.",
+   "description": "Look up definitions of Greek/Latin words conveniently in your browser. Not affiliated with Perseus Digital Library.",
    "version": "0.0.0.2",
    "content_scripts": [
      {

@@ -63,7 +63,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
         const lemmaHeader = mainCol.querySelector('.lemma_header');
         const table = mainCol.querySelector('table');
 
-        pTag.innerHTML = `<a id="showGrammaticalTable" href="">Show more</a> <hr> <a href=${url} target="_blank">Go to full lexicon entry (Perseus Project)</a>`
+        pTag.innerHTML = `<a id="showGrammaticalTable" href="">Show more</a> <hr> <a href=${url} target="_blank">Go to Perseus Digital Library search results.</a>`
         
         table.style.display = 'none'
 
@@ -74,7 +74,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
         //check if there were multiple definitions possible
         if (mainCol.querySelectorAll('.analysis').length > 1) {
           const multiDefPara = document.createElement('p');
-          multiDefPara.innerHTML = '<em>There were multiple definitions returned for this word. Check Perseus Project for all possible definitions.</em>';
+          multiDefPara.innerHTML = '<em>There were multiple definitions returned for this word. Check Perseus Digital Library for all possible definitions.</em>';
           defDiv.appendChild(multiDefPara);
         }
 
