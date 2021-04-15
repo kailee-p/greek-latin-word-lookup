@@ -63,7 +63,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
         const lemmaHeader = mainCol.querySelector('.lemma_header');
         const table = mainCol.querySelector('table');
 
-        pTag.innerHTML = `<a id="showGrammaticalTable" href="">Show more</a> <hr> <a href=${url} target="_blank">Go to Perseus Digital Library search results.</a>`
+        pTag.innerHTML = `<a id="showGrammaticalTable" href="">Show more</a> <hr> <a href=${url} target="_blank">Go to Perseus Digital Library search results</a>`
         
         table.style.display = 'none'
 
