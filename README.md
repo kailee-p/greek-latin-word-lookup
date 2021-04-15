@@ -41,9 +41,9 @@ If you'd like to download the latest version without waiting for an update, plea
 
 # Additional Screenshots
 
-![A screenshot of the popup with credits and the modal.](https://i.imgur.com/ZfHPZZx.png)
+![A screenshot of the popup with credits and the modal.](https://i.imgur.com/ocqw59e.png)
 
-![A screenshot of the modal with the grammar tables displayed.](https://i.imgur.com/GFc6RAM.png)
+![A screenshot of the modal.](https://i.imgur.com/yBICR0v.png)
 
 # Credits
 
