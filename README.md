@@ -1,5 +1,5 @@
 # Greek/Latin Word Lookup
-A Chrome extension that allows you to look up Greek and Latin words directly in the browser using Perseus Project.
+A lightweight Chrome extension that allows you to look up Greek and Latin words directly in the browser using Perseus Digital Library.
 
 # How to Install 
 
