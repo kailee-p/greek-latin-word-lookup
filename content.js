@@ -104,6 +104,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
 
           lemmaHeader = defArr[0].lemmaHeader;
           table = defArr[0].table;
+          table.style.display = 'none'
+
           defDiv.appendChild(lemmaHeader);
           defDiv.appendChild(pTag);
           defDiv.appendChild(table);
