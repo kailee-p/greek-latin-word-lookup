@@ -1,9 +1,9 @@
 let leftCoord;
 let topCoord;
-const body = document.querySelector('body')
+const body = document.querySelector('body');
 
 //detects where you clicked on the page and displays the popup modal near your cursor
-document.addEventListener("contextmenu", (e)=>{
+document.addEventListener("contextmenu", (e) => {
   //make sure modal does not go off the page on left or right side
   leftCoord = Math.floor(e.pageX) - 50 >= 10 ? Math.floor(e.pageX) - 50 : 10;
   if (leftCoord + 250 > window.innerWidth) {
@@ -43,7 +43,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
         + `font-family:'Helvetica', Arial, sans-serif;`
         + 'z-index: 9999; ');
 
-    getPage().then(data=>{
+    getPage().then(data => { 
       
       //resourceSite holds all webpage HTML
       const resourceSite = document.createElement('div')
@@ -73,8 +73,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
 
           //dropdown menu
           const multiDefDropdown = document.createElement('select');
-          //function for a definition's value to toggle between definitions
-          multiDefDropdown.setAttribute('id', 'def_dropdown');          
+          //style dropdown
+          multiDefDropdown.setAttribute('style', 'width: 230px;'
+            + 'overflow: hidden;'
+            + 'white-space: pre;'
+            + 'text-overflow: ellipsis;');     
 
           //store definitions in an array
           const defArr = [];
