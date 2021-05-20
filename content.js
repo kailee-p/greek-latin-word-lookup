@@ -52,42 +52,122 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse)=>{
       //pull mainCol div from Perseus Project
       const mainCol = resourceSite.querySelector('#main_col');
       const pTag = mainCol.querySelector('p');
+      
+      //initialize table variable - will be reassigned if multiple definitions
+      let table;
+      //initialize lemmaHeader variable - will be reassigned if multi defs
+      let lemmaHeader;
 
       //error checking
       if (pTag.innerHTML.charAt(0) === "S") {
         defDiv.innerHTML = "<p>No definition of this word was found.</p>"
         body.appendChild(defDiv)
-      } else {          
-        
-        //fetch relevant divs from URL and put into modal
-        const lemmaHeader = mainCol.querySelector('.lemma_header');
-        const table = mainCol.querySelector('table');
-
-        pTag.innerHTML = `<a id="showGrammaticalTable" href="">Show more</a> <hr> <a href=${url} target="_blank">Go to Perseus Digital Library search results</a>`
-        
-        table.style.display = 'none'
-
-        defDiv.appendChild(lemmaHeader);
-        defDiv.appendChild(pTag);
-        defDiv.appendChild(table);
-
+      } else {      
         //check if there were multiple definitions possible
         if (mainCol.querySelectorAll('.analysis').length > 1) {
+
+          //paragraph to indicate multiple definitions
           const multiDefPara = document.createElement('p');
-          multiDefPara.innerHTML = '<em>There were multiple definitions returned for this word. Check Perseus Digital Library for all possible definitions.</em>';
+          multiDefPara.innerHTML = `<em>There were multiple definitions 
+          returned for this word.</em>`;
+
+          //dropdown menu
+          const multiDefDropdown = document.createElement('select');
+          //function for a definition's value to toggle between definitions
+          multiDefDropdown.setAttribute('id', 'def_dropdown');          
+
+          //store definitions in an array
+          const defArr = [];
+          //push all definitions to array stored as object
+          mainCol
+            .querySelectorAll('.lemma')
+            .forEach(lemma => {
+              defArr.push({
+                definition: lemma.querySelector('.lemma_definition').innerText.trim(),
+                lemmaHeader: lemma.querySelector('.lemma_header'),
+                table: lemma.querySelector('table')
+              });
+            })
+          //iterate through definitions to create dropdown menu
+          defArr.forEach((elem, idx) => {
+              multiDefDropdown.innerHTML += `<option value=${idx}>${elem.definition}</option>`;
+            })
+
+          console.log(defArr[1].table);
+
+          //append dropdown to modal        
           defDiv.appendChild(multiDefPara);
+          defDiv.appendChild(multiDefDropdown);
+
+          //append text & first definition found to table 
+          pTag.innerHTML = `<a id="showGrammaticalTable" href="">Show more</a> <hr> <a href=${url} target="_blank">Go to Perseus Digital Library search results</a>`
+
+          lemmaHeader = defArr[0].lemmaHeader;
+          table = defArr[0].table;
+          defDiv.appendChild(lemmaHeader);
+          defDiv.appendChild(pTag);
+          defDiv.appendChild(table);
+
+          //toggle different definitions depending on selection
+          multiDefDropdown.addEventListener('input', function(event) {
+            //initialize currentSelection variable
+            let currentSelection = event.target.value;
+
+            //delete current divs/tables/text
+            lemmaHeader.remove();
+            pTag.remove();
+            table.remove();
+
+            //find new definition and table based on selection
+            lemmaHeader = defArr[currentSelection].lemmaHeader;
+            table = defArr[currentSelection].table;
+
+            //append definition divs/tables/text to modal
+            pTag.innerHTML = `<a id="showGrammaticalTable" href="">Show more</a> <hr> <a href=${url} target="_blank">Go to Perseus Digital Library search results</a>`
+
+            table.style.display = 'none'
+            defDiv.appendChild(lemmaHeader);
+            defDiv.appendChild(pTag);
+            defDiv.appendChild(table);
+
+            //toggle the grammatical tables in the modal
+            const toggle = pTag.querySelector("#showGrammaticalTable")
+            toggle.addEventListener("click", (e) => {
+              e.preventDefault();
+              if (toggle.textContent === "Show more") {
+                table.style.display = "block"
+                toggle.textContent = 'Collapse'
+              } else {
+                table.style.display = "none"
+                toggle.textContent = 'Show more'
+              }
+            });
+          });
+
+        } else { //only one definition found
+
+          //fetch relevant divs from URL and put into modal
+          lemmaHeader = mainCol.querySelector('.lemma_header');
+          table = mainCol.querySelector('table');
+
+          pTag.innerHTML = `<a id="showGrammaticalTable" href="">Show more</a> <hr> <a href=${url} target="_blank">Go to Perseus Digital Library search results</a>`
+          
+          table.style.display = 'none'
+          defDiv.appendChild(lemmaHeader);
+          defDiv.appendChild(pTag);
+          defDiv.appendChild(table);
         }
 
         body.appendChild(defDiv)
 
         //toggle the grammatical tables in the modal
-        const toggle = body.querySelector("#showGrammaticalTable")
-        toggle.addEventListener("click", (e)=>{
-          e.preventDefault()
-          if(toggle.textContent === "Show more"){
+        const toggle = pTag.querySelector("#showGrammaticalTable")
+        toggle.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (toggle.textContent === "Show more") {
             table.style.display = "block"
             toggle.textContent = 'Collapse'
-          }else{
+          } else {
             table.style.display = "none"
             toggle.textContent = 'Show more'
           }
