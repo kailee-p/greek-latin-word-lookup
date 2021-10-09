@@ -4,7 +4,10 @@ const translationContextMenu = {
   "title": "Translate Greek/Latin Word",
   "contexts": ["all"] 
 };
-chrome.contextMenus.create(translationContextMenu); 
+
+chrome.runtime.onInstalled.addListener(() => {
+  chrome.contextMenus.create(translationContextMenu); 
+});
 
 chrome.contextMenus.onClicked.addListener(function(info, tab) {
   let msg = {

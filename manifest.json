@@ -1,8 +1,8 @@
 {
-  "manifest_version" : 2,
+  "manifest_version" : 3,
    "name": "Greek/Latin Word Lookup",
    "description": "Look up definitions of Greek/Latin words conveniently in your browser. Not affiliated with Perseus Digital Library.",
-   "version": "0.0.0.6",
+   "version": "0.0.0.7",
    "content_scripts": [
      {
        "matches": [
@@ -17,14 +17,12 @@
     "contextMenus"
   ],
    "background" : {
-     "scripts": [
-       "background.js"
-      ]
+     "service_worker": "background.js"
    },
    "icons": {
      "128": "icon128.png"
    },
-   "browser_action": {
+   "action": {
     "default_icon": "icon.png",
     "default_popup":"popup.html",
     "default_title": "Greek/Latin Word Lookup"
