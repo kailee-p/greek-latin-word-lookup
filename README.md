@@ -34,7 +34,7 @@ If you'd like to download the latest version without waiting for an update, plea
 2. Right click.
 3. Select **Translate Greek/Latin Word** from dropdown menu.  
 3a. Select **Show more** to see grammatical tables for the selected word.  
-3b. Select **Go to full lexicon entry** to navigate to the word's entry in Perseus Project.
+3b. Select **Go to Perseus Digital Library search results** to navigate to the word's entry/entries in Perseus Project.
 4. Clicking outside the definition will close it, allowing you to look up another word.
 
 ![A screenshot of the extension's context menu that triggers the definition modal.](https://i.imgur.com/AMWdrvx.png)
